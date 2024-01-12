@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="weather-block-container">
+
+            <div class="search-box-block blocks">
+                <i class="fa fa-search"></i>
+                <input type="text" id="search-box" placeholder="Search a city" onkeydown="handleEnter(event)">
+                <i class="fa fa-close" onclick="clearInput()"></i>
+            </div>
+            
+            <div class="curr-weather-block blocks">
+                <p id="curr-location">-----</p>
+                <p id="curr-temperature">--°</p>
+                <p id="curr-condition">-----</p>
+                <div class="curr-h-l-container">
+                    <p id="curr-highest-temp">H:--°</p>
+                    <p id="curr-lowest-temp">L:--°</p>
+                </div>
+            </div>
+            
+            <div class="today-forecast-block blocks">
+                <p class="blocks-subtitle">Hourly Forecast</p>
+
+                <div class="swiper hour-blocks-container">
+                    <div class="swiper-wrapper">
+                        
+                        <!-- <div class="swiper-slide">
+                            <p class="hour-time">5AM</p>
+                            <img class="hour-weather-icon"></img>
+                            <p class="hour-temperater">14°</p>
+                        </div> -->
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ten-days-forecast-block blocks">
+                <p class="blocks-subtitle">7 Day Forecast</p>
+
+                <div class="days-blocks-container">
+
+                    <!-- <div class="days-blocks">
+                        <p class="day">Today</p>
+                        <img class="day-weather-icon" src="" alt="">
+                        <div class="day-h-l-container">
+                            <p class="day-lowest-temp">15°</p>
+                            <div class="day-h-l-line"></div>
+                            <p class="day-highest-temp">21°</p>
+                        </div>
+                    </div> -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="currWeather.js"></script>
+    <script src="hourWeather.js"></script>
+    <script src="dayWeather.js"></script>
+    <script src="functions.js"></script>
+</body>
+</html>
